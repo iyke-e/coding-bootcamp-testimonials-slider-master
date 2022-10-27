@@ -28,12 +28,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](images/Frontend%20Mentor%20%20%20Coding%20Bootcamp%20Testimonials%20Slider.png.jpg)
+![](images/Frontend%20Mentor%20%20%20Coding%20Bootcamp%20Testimonials%20Slider.png)
 
 
 ### Links
 
-- Solution URL: [click to view solution](https://your-solution-url.com)
+- Solution URL: [click to view solution](https://github.com/iyke-e/coding-bootcamp-testimonials-slider-master)
 - Live Site URL: [click to view live url](https://your-live-site-url.com)
 
 ## My process
