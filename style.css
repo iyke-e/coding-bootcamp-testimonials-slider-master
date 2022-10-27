@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    font-family: 'Inter', sans-serif;
+    --DarkBlue: hsl(240, 38%, 20%);
+    --GrayBlue: hsl(240, 18%, 77%);
+}
+
+body {
+    background: url(images/pattern-curve.svg) no-repeat bottom left;
+    background-size: 70%;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    gap: 5rem;
+    min-height: 100vh;
+    max-width: 100vw;
+    padding: 5vw;
+}
+
+.image-container {
+    width: 90vw;
+    height: 80vw;
+    display: grid;
+    place-content: center;
+    background-image: url(images/pattern-bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.image {
+    display: inline-block;
+    width: 65vw;
+    height: 65vw;
+    background-image: url(images/image-tanya.jpg);
+    background-size: cover;
+    position: relative;
+    border-radius: 7px;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.testimony {
+    animation: fadein 1s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.arrow {
+    display: flex;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    bottom: 0;
+    left: 50%;
+}
+
+.arrow img {
+    display: block;
+    width: 40px;
+    padding: 10px 15px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.arrow img:hover {
+    opacity: 50%;
+}
+
+.left {
+    border-radius: 50px 0 0 50px;
+}
+
+.right {
+    border-radius: 0 50px 50px 0;
+}
+
+.text {
+    height: 100%;
+    text-align: center;
+    max-width: 42rem;
+    position: relative;
+}
+
+p {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    font-weight: 300;
+    color: var(--DarkBlue);
+    position: relative;
+}
+
+p::before {
+    content: "";
+    width: 8rem;
+    height: 8rem;
+    background-image: url(images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+small {
+    font-size: 1.6rem;
+    display: inline-block;
+    padding-top: 2rem;
+    color: var(--GrayBlue);
+}
+
+strong {
+    color: var(--DarkBlue);
+    font-size: 1.8rem;
+}
+
+@media (min-width: 600px) {
+    body {
+        background-size: 40%;
+    }
+    main {
+        place-items: start;
+        position: relative;
+        padding-left: 15vw;
+    }
+    .image-container {
+        position: absolute;
+        width: 48vw;
+        height: 48vw;
+        transform: translateY(50%);
+        right: 5%;
+        bottom: 50%;
+        background-image: url(images/pattern-bg.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .image {
+        width: 36vw;
+        height: 36vw;
+        background-image: url(images/image-tanya.jpg);
+        box-shadow: 0 0 90px rgba(0, 0, 0, 0.3);
+        background-size: cover;
+    }
+    .arrow {
+        left: 20%;
+    }
+    .arrow img {
+        padding: 15px 20px;
+        width: 7rem;
+    }
+    .text {
+        max-width: 42vw;
+        align-self: start;
+        display: grid;
+        align-items: center;
+        text-align: left;
+    }
+    p {
+        font-size: 4.0rem;
+        text-align: start;
+    }
+    p::before {
+        width: 15rem;
+        height: 15rem;
+        left: 20%;
+    }
+    br {
+        display: none;
+    }
+    small {
+        font-size: 3.0rem;
+    }
+    strong {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width:600px) and (max-width: 1000px) {
+    p {
+        font-size: 2.0rem;
+    }
+    p::before {
+        width: 7rem;
+        height: 7rem;
+    }
+    small,
+    strong {
+        font-size: 1.6rem;
+    }
+}
